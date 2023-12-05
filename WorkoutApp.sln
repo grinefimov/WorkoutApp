@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutApp.Infrastructure.I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutApp.RestApi", "src\WorkoutApp.RestApi\WorkoutApp.RestApi.csproj", "{4047FF2E-3E61-4CFA-9C92-25D0BFB40ECB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutApp.RestApi.IntegrationTests", "tests\WorkoutApp.RestApi.IntegrationTests\WorkoutApp.RestApi.IntegrationTests.csproj", "{DB16B22C-D5A1-43BD-96AD-6B89C9336A70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutApp.RestApi.FunctionalTests", "tests\WorkoutApp.RestApi.FunctionalTests\WorkoutApp.RestApi.FunctionalTests.csproj", "{DB16B22C-D5A1-43BD-96AD-6B89C9336A70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
