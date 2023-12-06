@@ -16,7 +16,7 @@ namespace WorkoutApp.Infrastructure.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.0");
 
-            modelBuilder.Entity("WorkoutApp.Core.Entities.Sample", b =>
+            modelBuilder.Entity("WorkoutApp.Core.Entities.Exercise", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -28,7 +28,7 @@ namespace WorkoutApp.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Samples");
+                    b.ToTable("Exercise");
                 });
 #pragma warning restore 612, 618
         }

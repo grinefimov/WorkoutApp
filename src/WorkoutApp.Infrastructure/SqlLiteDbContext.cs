@@ -17,5 +17,5 @@ public class SqlLiteDbContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder options)
         => options.UseSqlite($"Data Source={DbPath}");
 
-    public DbSet<Sample> Samples { get; set; }
+    public DbSet<Exercise> Exercises { get; set; }
 }

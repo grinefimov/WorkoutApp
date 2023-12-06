@@ -11,7 +11,7 @@ namespace WorkoutApp.Infrastructure.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Samples",
+                name: "Exercises",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -20,7 +20,7 @@ namespace WorkoutApp.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Samples", x => x.Id);
+                    table.PrimaryKey("PK_Exercise", x => x.Id);
                 });
         }
 
@@ -28,7 +28,7 @@ namespace WorkoutApp.Infrastructure.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Samples");
+                name: "Exercise");
         }
     }
 }
