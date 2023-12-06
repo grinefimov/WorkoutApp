@@ -20,8 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\WorkoutApp.SharedKernel\WorkoutApp.SharedKernel.csproj" />
     <ProjectReference Include="..\WorkoutApp.Core\WorkoutApp.Core.csproj" />
+    <ProjectReference Include="..\WorkoutApp.SharedKernel\WorkoutApp.SharedKernel.csproj" />
   </ItemGroup>
 
 </Project>

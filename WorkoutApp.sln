@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutApp.RestApi", "src\W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutApp.RestApi.FunctionalTests", "tests\WorkoutApp.RestApi.FunctionalTests\WorkoutApp.RestApi.FunctionalTests.csproj", "{DB16B22C-D5A1-43BD-96AD-6B89C9336A70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkoutApp.SharedKernel", "WorkoutApp.SharedKernel\WorkoutApp.SharedKernel.csproj", "{B0C0FF66-1A36-4413-B1C6-F92971D2A57D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutApp.SharedKernel", "src\WorkoutApp.SharedKernel\WorkoutApp.SharedKernel.csproj", "{697ED874-289A-4F69-A191-7A2B8121ACB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,10 +57,10 @@ Global
 		{DB16B22C-D5A1-43BD-96AD-6B89C9336A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB16B22C-D5A1-43BD-96AD-6B89C9336A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB16B22C-D5A1-43BD-96AD-6B89C9336A70}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B0C0FF66-1A36-4413-B1C6-F92971D2A57D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B0C0FF66-1A36-4413-B1C6-F92971D2A57D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B0C0FF66-1A36-4413-B1C6-F92971D2A57D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B0C0FF66-1A36-4413-B1C6-F92971D2A57D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{697ED874-289A-4F69-A191-7A2B8121ACB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{697ED874-289A-4F69-A191-7A2B8121ACB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{697ED874-289A-4F69-A191-7A2B8121ACB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{697ED874-289A-4F69-A191-7A2B8121ACB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,7 +71,7 @@ Global
 		{3A1B6317-9839-4090-A121-05A3F19BB988} = {A7D2ED65-6DB9-4833-B7D3-9E5FE5C2E979}
 		{6A29BEE5-13BD-4ACA-B332-FD9703A91F9B} = {35390883-9B93-4E97-8D1A-85E80B9A6FA0}
 		{4047FF2E-3E61-4CFA-9C92-25D0BFB40ECB} = {A7D2ED65-6DB9-4833-B7D3-9E5FE5C2E979}
-		{B0C0FF66-1A36-4413-B1C6-F92971D2A57D} = {A7D2ED65-6DB9-4833-B7D3-9E5FE5C2E979}
+		{697ED874-289A-4F69-A191-7A2B8121ACB4} = {A7D2ED65-6DB9-4833-B7D3-9E5FE5C2E979}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {19CA1E33-ECEC-46EE-BFF5-270A79B6DF44}

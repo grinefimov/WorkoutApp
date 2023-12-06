@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\WorkoutApp.SharedKernel\WorkoutApp.SharedKernel.csproj" />
+    <ProjectReference Include="..\WorkoutApp.SharedKernel\WorkoutApp.SharedKernel.csproj" />
   </ItemGroup>
 
 </Project>
