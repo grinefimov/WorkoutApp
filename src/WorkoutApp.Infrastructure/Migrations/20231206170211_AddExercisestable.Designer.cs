@@ -10,8 +10,8 @@ using WorkoutApp.Infrastructure;
 namespace WorkoutApp.Infrastructure.Migrations
 {
     [DbContext(typeof(SqlLiteDbContext))]
-    [Migration("20231205175128_WorkoutAppDb")]
-    partial class WorkoutAppDb
+    [Migration("20231206170211_AddExercisestable")]
+    partial class AddExercisestable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\WorkoutApp.SharedKernel\WorkoutApp.SharedKernel.csproj" />
     <ProjectReference Include="..\WorkoutApp.Core\WorkoutApp.Core.csproj" />
   </ItemGroup>
 

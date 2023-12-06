@@ -1,6 +1,8 @@
-﻿namespace WorkoutApp.Core.Entities;
+﻿using WorkoutApp.SharedKernel;
 
-public class Exercise : EntityBase
+namespace WorkoutApp.Core.Entities;
+
+public class Exercise : EntityBase<int>
 {
     public string Name { get; set; }
 }

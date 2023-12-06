@@ -28,7 +28,7 @@ namespace WorkoutApp.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Exercise");
+                    b.ToTable("Exercises");
                 });
 #pragma warning restore 612, 618
         }

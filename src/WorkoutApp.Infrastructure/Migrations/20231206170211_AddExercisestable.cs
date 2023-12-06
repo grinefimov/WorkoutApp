@@ -5,7 +5,7 @@
 namespace WorkoutApp.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class WorkoutAppDb : Migration
+    public partial class AddExercisestable : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -20,7 +20,7 @@ namespace WorkoutApp.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Exercise", x => x.Id);
+                    table.PrimaryKey("PK_Exercises", x => x.Id);
                 });
         }
 
@@ -28,7 +28,7 @@ namespace WorkoutApp.Infrastructure.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Exercise");
+                name: "Exercises");
         }
     }
 }
