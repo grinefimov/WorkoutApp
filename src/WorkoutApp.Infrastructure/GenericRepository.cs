@@ -3,20 +3,9 @@ using WorkoutApp.SharedKernel;
 
 namespace WorkoutApp.Infrastructure
 {
-    internal class GenericRepository<TEntity>(DbContext dbContext) : IGenericRepository<TEntity> where TEntity : EntityBase<int>
+    public class GenericRepository<TEntity>(SqlLiteDbContext dbContext) : IGenericRepository<TEntity> where TEntity : EntityBase<int>
     {
-        private DbSet<TEntity> _dbSet { get; set; } = dbContext.Set<TEntity>();
-
-        public async Task AddAsync(TEntity entity)
-        {
-            await _dbSet.AddAsync(entity);
-        }
-
-        public Task DeleteAsync(TEntity entity)
-        {
-             _dbSet.Remove(entity);
-             return Task.CompletedTask;
-        }
+        private readonly DbSet<TEntity> _dbSet = dbContext.Set<TEntity>();
 
         public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
@@ -28,10 +17,22 @@ namespace WorkoutApp.Infrastructure
             return await _dbSet.FindAsync(id);
         }
 
-        public Task UpdateAsync(TEntity entity)
+        public async Task AddAsync(TEntity entity)
+        {
+            await _dbSet.AddAsync(entity);
+            await dbContext.SaveChangesAsync();
+        }
+
+        public async Task UpdateAsync(TEntity entity)
         {
             _dbSet.Update(entity);
-            return Task.CompletedTask;
+            await dbContext.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(TEntity entity)
+        {
+            _dbSet.Remove(entity);
+            await dbContext.SaveChangesAsync();
         }
     }
 }

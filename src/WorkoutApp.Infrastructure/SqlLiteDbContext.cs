@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WorkoutApp.Core.Entities;
+using WorkoutApp.Core;
 
 namespace WorkoutApp.Infrastructure;
 
@@ -8,6 +8,10 @@ public class SqlLiteDbContext : DbContext
     public string DbPath { get; }
 
     public SqlLiteDbContext()
+    {
+    }
+
+    public SqlLiteDbContext(DbContextOptions<SqlLiteDbContext> options) : base(options)
     {
         var path = Environment.CurrentDirectory;
         //var path = Environment.GetFolderPath(folder);

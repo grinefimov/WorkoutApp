@@ -1,6 +1,6 @@
 ﻿using WorkoutApp.SharedKernel;
 
-namespace WorkoutApp.Core.Entities;
+namespace WorkoutApp.Core;
 
 public class Exercise : EntityBase<int>
 {

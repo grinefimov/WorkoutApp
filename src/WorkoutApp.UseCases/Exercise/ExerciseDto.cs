@@ -1,5 +1,6 @@
 ﻿namespace WorkoutApp.UseCases.Exercise;
 
-internal class ExerciseDto
+public class ExerciseDto
 {
+    public string Name { get; set; }
 }

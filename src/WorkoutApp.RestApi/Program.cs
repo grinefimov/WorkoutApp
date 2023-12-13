@@ -1,39 +1,41 @@
-using System.Text.Json.Serialization;
-using WorkoutApp.RestApi;
+using System.Reflection;
+using FastEndpoints;
+using FastEndpoints.Swagger;
+using Microsoft.EntityFrameworkCore;
+using WorkoutApp.Infrastructure;
+using WorkoutApp.SharedKernel;
+using WorkoutApp.UseCases.Exercise;
 
-var builder = WebApplication.CreateSlimBuilder(args);
+var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.ConfigureHttpJsonOptions(options =>
+builder.Services.AddFastEndpoints();
+builder.Services.SwaggerDocument(o =>
 {
-    options.SerializerOptions.TypeInfoResolverChain.Insert(0, AppJsonSerializerContext.Default);
+    o.ShortSchemaNames = true;
 });
+builder.Services.AddMediatR(cfg =>
+{
+    cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
+    cfg.RegisterServicesFromAssembly(typeof(ExerciseDto).Assembly);
+});
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+var connectionString = builder.Configuration.GetConnectionString("SqliteConnection");
+builder.Services.AddDbContext<SqlLiteDbContext>(options => options.UseSqlite(connectionString));
 
 var app = builder.Build();
 
-var sampleTodos = new Todo[] {
-    new(1, "Walk the dog"),
-    new(2, "Do the dishes", DateOnly.FromDateTime(DateTime.Now)),
-    new(3, "Do the laundry", DateOnly.FromDateTime(DateTime.Now.AddDays(1))),
-    new(4, "Clean the bathroom"),
-    new(5, "Clean the car", DateOnly.FromDateTime(DateTime.Now.AddDays(2)))
-};
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+else
+{
+    app.UseDefaultExceptionHandler();
+    app.UseHsts();
+}
+app.UseFastEndpoints();
+app.UseSwaggerGen();
 
-var todosApi = app.MapGroup("/todos");
-todosApi.MapGet("/", () => sampleTodos);
-todosApi.MapGet("/{id}", (int id) =>
-    sampleTodos.FirstOrDefault(a => a.Id == id) is { } todo
-        ? Results.Ok(todo)
-        : Results.NotFound());
+app.UseHttpsRedirection();
 
 app.Run();
-
-namespace WorkoutApp.RestApi
-{
-    public record Todo(int Id, string? Title, DateOnly? DueBy = null, bool IsComplete = false);
-
-    [JsonSerializable(typeof(Todo[]))]
-    internal partial class AppJsonSerializerContext : JsonSerializerContext
-    {
-
-    }
-}
