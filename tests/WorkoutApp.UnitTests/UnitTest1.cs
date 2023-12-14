@@ -1,4 +1,4 @@
-namespace WorkoutApp.UseCases.UnitTests;
+namespace WorkoutApp.UnitTests;
 
 public class UnitTest1
 {

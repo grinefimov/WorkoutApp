@@ -13,13 +13,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutApp.UseCases", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutApp.Infrastructure", "src\WorkoutApp.Infrastructure\WorkoutApp.Infrastructure.csproj", "{3A1B6317-9839-4090-A121-05A3F19BB988}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutApp.UseCases.UnitTests", "tests\WorkoutApp.UseCases.UnitTests\WorkoutApp.UseCases.UnitTests.csproj", "{3573DED9-2214-49E8-A2C0-D9BC951E20B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutApp.UnitTests", "tests\WorkoutApp.UnitTests\WorkoutApp.UnitTests.csproj", "{3573DED9-2214-49E8-A2C0-D9BC951E20B1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutApp.Infrastructure.IntegrationTests", "tests\WorkoutApp.Infrastructure.IntegrationTests\WorkoutApp.Infrastructure.IntegrationTests.csproj", "{6A29BEE5-13BD-4ACA-B332-FD9703A91F9B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutApp.RestApi", "src\WorkoutApp.RestApi\WorkoutApp.RestApi.csproj", "{4047FF2E-3E61-4CFA-9C92-25D0BFB40ECB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutApp.RestApi.IntegrationTests", "tests\WorkoutApp.RestApi.IntegrationTests\WorkoutApp.RestApi.IntegrationTests.csproj", "{DB16B22C-D5A1-43BD-96AD-6B89C9336A70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutApp.RestApi.FunctionalTests", "tests\WorkoutApp.RestApi.FunctionalTests\WorkoutApp.RestApi.FunctionalTests.csproj", "{DB16B22C-D5A1-43BD-96AD-6B89C9336A70}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutApp.SharedKernel", "src\WorkoutApp.SharedKernel\WorkoutApp.SharedKernel.csproj", "{697ED874-289A-4F69-A191-7A2B8121ACB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{DB16B22C-D5A1-43BD-96AD-6B89C9336A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB16B22C-D5A1-43BD-96AD-6B89C9336A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB16B22C-D5A1-43BD-96AD-6B89C9336A70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{697ED874-289A-4F69-A191-7A2B8121ACB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{697ED874-289A-4F69-A191-7A2B8121ACB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{697ED874-289A-4F69-A191-7A2B8121ACB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{697ED874-289A-4F69-A191-7A2B8121ACB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{6A29BEE5-13BD-4ACA-B332-FD9703A91F9B} = {35390883-9B93-4E97-8D1A-85E80B9A6FA0}
 		{4047FF2E-3E61-4CFA-9C92-25D0BFB40ECB} = {A7D2ED65-6DB9-4833-B7D3-9E5FE5C2E979}
 		{DB16B22C-D5A1-43BD-96AD-6B89C9336A70} = {35390883-9B93-4E97-8D1A-85E80B9A6FA0}
+		{697ED874-289A-4F69-A191-7A2B8121ACB4} = {A7D2ED65-6DB9-4833-B7D3-9E5FE5C2E979}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {19CA1E33-ECEC-46EE-BFF5-270A79B6DF44}

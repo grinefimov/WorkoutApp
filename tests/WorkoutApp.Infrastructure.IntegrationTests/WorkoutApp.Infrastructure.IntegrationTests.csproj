@@ -22,4 +22,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\WorkoutApp.Infrastructure\WorkoutApp.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

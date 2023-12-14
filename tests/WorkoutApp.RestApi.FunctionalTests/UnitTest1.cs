@@ -1,4 +1,4 @@
-namespace WorkoutApp.RestApi.IntegrationTests;
+namespace WorkoutApp.RestApi.FunctionalTests;
 
 public class UnitTest1
 {
